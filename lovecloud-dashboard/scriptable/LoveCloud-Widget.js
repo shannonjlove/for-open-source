@@ -11,6 +11,7 @@ async function loadInventory() {
         Authorization: `Bearer ${Keychain.get("lovecloud.inventory.token")}`,
       };
     }
+    req.timeoutInterval = 20;
     return await req.loadJSON();
   }
   const fm = FileManager.iCloud();
