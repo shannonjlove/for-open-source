@@ -1,0 +1,2180 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-10T16:32:20.605215+00:00",
+  "source": "lovecloud-system-architecture.md + wave0 reconcile (seed; not live probe)",
+  "authority": {
+    "docid_registry": "postgresql://oracle registry-api :8786",
+    "secrets": "1Password (metadata only; values never projected)",
+    "executable_config": "shannonjlove/SJL-SYSTEM-REGISTRY",
+    "human_ops": "BookStack"
+  },
+  "live": false,
+  "refresh_hint_seconds": 60,
+  "summary": {
+    "total": 237,
+    "by_kind": {
+      "subdomain": 18,
+      "node": 9,
+      "server": 2,
+      "container": 36,
+      "application": 3,
+      "service": 8,
+      "authority": 4,
+      "cloud_storage": 64,
+      "repository_secret": 5,
+      "secret_item": 32,
+      "api_token": 17,
+      "ssh_key": 6,
+      "repository": 4,
+      "quadlet": 24,
+      "filesystem": 5
+    },
+    "by_status": {
+      "configured_pending": 37,
+      "verified_active": 131,
+      "authority_control_plane": 65,
+      "legacy_failed": 4
+    }
+  },
+  "resources": [
+    {
+      "id": "cf2e0d851cb9",
+      "kind": "subdomain",
+      "name": "agent.shannonjlove.cloud",
+      "host": "hostinger",
+      "endpoint": "10.88.0.88:80",
+      "status": "configured_pending",
+      "evidence": "Nginx Proxy Manager proxy id 2"
+    },
+    {
+      "id": "29c089ebf245",
+      "kind": "node",
+      "name": "ai-lovecloud",
+      "host": "-",
+      "endpoint": "100.86.69.118, fd7a:115c:a1e0::6833:4577",
+      "status": "verified_active",
+      "evidence": "tailscale status --json"
+    },
+    {
+      "id": "18ea019a34ac",
+      "kind": "node",
+      "name": "apple-tv",
+      "host": "-",
+      "endpoint": "100.66.153.40, fd7a:115c:a1e0::db33:9929",
+      "status": "verified_active",
+      "evidence": "tailscale status --json"
+    },
+    {
+      "id": "e4219138df21",
+      "kind": "subdomain",
+      "name": "bookstack.shannonjlove.cloud",
+      "host": "hostinger",
+      "endpoint": "bookstack:80",
+      "status": "verified_active",
+      "evidence": "Nginx Proxy Manager proxy id 10",
+      "link": "[bookstack.shannonjlove.cloud](https://bookstack.shannonjlove.cloud)"
+    },
+    {
+      "id": "b905040e29c5",
+      "kind": "subdomain",
+      "name": "claudedashboard.shannonjlove.cloud",
+      "host": "hostinger",
+      "endpoint": "claudedashboard.shannonjlove.cloud:80",
+      "status": "configured_pending",
+      "evidence": "Nginx Proxy Manager proxy id 7"
+    },
+    {
+      "id": "7da34f807c5d",
+      "kind": "subdomain",
+      "name": "dashboard.shannonjlove.cloud",
+      "host": "hostinger",
+      "endpoint": "100.115.66.75:8790",
+      "status": "verified_active",
+      "evidence": "Nginx Proxy Manager proxy id 3",
+      "link": "[dashboard.shannonjlove.cloud](https://dashboard.shannonjlove.cloud)"
+    },
+    {
+      "id": "204635e2c3d8",
+      "kind": "subdomain",
+      "name": "docs.shannonjlove.cloud",
+      "host": "hostinger",
+      "endpoint": "paperless:8000",
+      "status": "verified_active",
+      "evidence": "Nginx Proxy Manager proxy id 4",
+      "link": "[docs.shannonjlove.cloud](https://docs.shannonjlove.cloud)"
+    },
+    {
+      "id": "7e2ed5be2aef",
+      "kind": "subdomain",
+      "name": "filebrowser.shannonjlove.cloud",
+      "host": "hostinger",
+      "endpoint": "10.88.0.1:8788",
+      "status": "configured_pending",
+      "evidence": "Nginx Proxy Manager proxy id 8"
+    },
+    {
+      "id": "223434b3af15",
+      "kind": "node",
+      "name": "gclove-server-vm-instance",
+      "host": "-",
+      "endpoint": "100.86.67.123, fd7a:115c:a1e0::2c01:439f",
+      "status": "configured_pending",
+      "evidence": "tailscale status --json"
+    },
+    {
+      "id": "990fbfd2f3e6",
+      "kind": "subdomain",
+      "name": "github-mcp.shannonjlove.cloud",
+      "host": "hostinger",
+      "endpoint": "10.89.2.9:8082",
+      "status": "configured_pending",
+      "evidence": "Nginx Proxy Manager proxy id 6"
+    },
+    {
+      "id": "ce6259eb0e5c",
+      "kind": "subdomain",
+      "name": "hostinger-mcp.shannonjlove.cloud",
+      "host": "hostinger",
+      "endpoint": "sjl-hostinger-mcp:8000",
+      "status": "configured_pending",
+      "evidence": "Nginx Proxy Manager proxy id 5"
+    },
+    {
+      "id": "f4645397fa87",
+      "kind": "node",
+      "name": "hostinger-sjl",
+      "host": "-",
+      "endpoint": "100.115.66.75, fd7a:115c:a1e0::a01:4298",
+      "status": "verified_active",
+      "evidence": "tailscale status --json"
+    },
+    {
+      "id": "f9cf8ae25092",
+      "kind": "node",
+      "name": "ip-172-31-38-121",
+      "host": "-",
+      "endpoint": "100.127.235.58, fd7a:115c:a1e0::e401:eb99",
+      "status": "configured_pending",
+      "evidence": "tailscale status --json"
+    },
+    {
+      "id": "a899f8ef8257",
+      "kind": "subdomain",
+      "name": "jellyfin.shannonjlove.cloud",
+      "host": "hostinger",
+      "endpoint": "100.115.66.75:8096",
+      "status": "verified_active",
+      "dependencies": "ios-clients, tvos-clients",
+      "evidence": "Nginx Proxy Manager proxy id 16",
+      "link": "[jellyfin.shannonjlove.cloud](https://jellyfin.shannonjlove.cloud)"
+    },
+    {
+      "id": "817d20e0bbbf",
+      "kind": "node",
+      "name": "localhost",
+      "host": "-",
+      "endpoint": "100.92.161.78, fd7a:115c:a1e0::3a39:a14e",
+      "status": "verified_active",
+      "evidence": "tailscale status --json"
+    },
+    {
+      "id": "37ad1ca2d2f4",
+      "kind": "subdomain",
+      "name": "mcp.shannonjlove.cloud",
+      "host": "hostinger",
+      "endpoint": "100.115.66.75:7300",
+      "status": "verified_active",
+      "evidence": "Nginx Proxy Manager proxy id 1",
+      "link": "[mcp.shannonjlove.cloud](https://mcp.shannonjlove.cloud)"
+    },
+    {
+      "id": "bff3b6ae681c",
+      "kind": "subdomain",
+      "name": "memory.shannonjlove.cloud",
+      "host": "hostinger",
+      "endpoint": "100.115.66.75:8100",
+      "status": "verified_active",
+      "evidence": "Nginx Proxy Manager proxy id 20",
+      "link": "[memory.shannonjlove.cloud](https://memory.shannonjlove.cloud)"
+    },
+    {
+      "id": "522e3a59d193",
+      "kind": "subdomain",
+      "name": "n8n.shannonjlove.cloud",
+      "host": "hostinger",
+      "endpoint": "n8n:5678",
+      "status": "verified_active",
+      "evidence": "Nginx Proxy Manager proxy id 9",
+      "link": "[n8n.shannonjlove.cloud](https://n8n.shannonjlove.cloud)"
+    },
+    {
+      "id": "3c851d30586e",
+      "kind": "subdomain",
+      "name": "oracle-mcp.shannonjlove.cloud",
+      "host": "hostinger",
+      "endpoint": "100.115.66.75:8798",
+      "status": "verified_active",
+      "evidence": "Nginx Proxy Manager proxy id 13",
+      "link": "[oracle-mcp.shannonjlove.cloud](https://oracle-mcp.shannonjlove.cloud)"
+    },
+    {
+      "id": "fa83f5a8da5c",
+      "kind": "node",
+      "name": "oracle-sos",
+      "host": "-",
+      "endpoint": "100.67.229.94, fd7a:115c:a1e0::5301:e5a0",
+      "status": "verified_active",
+      "evidence": "tailscale status --json"
+    },
+    {
+      "id": "30ba340c82d2",
+      "kind": "subdomain",
+      "name": "push.shannonjlove.cloud",
+      "host": "hostinger",
+      "endpoint": "72.61.74.250:8787",
+      "status": "verified_active",
+      "evidence": "Nginx Proxy Manager proxy id 11",
+      "link": "[push.shannonjlove.cloud](https://push.shannonjlove.cloud)"
+    },
+    {
+      "id": "a5cc6f3d7e3b",
+      "kind": "subdomain",
+      "name": "rclonegui.shannonjlove.cloud",
+      "host": "hostinger",
+      "endpoint": "rclone-gui:5572",
+      "status": "configured_pending",
+      "evidence": "Nginx Proxy Manager proxy id 19"
+    },
+    {
+      "id": "b4a5261d9266",
+      "kind": "node",
+      "name": "shaje's iphone",
+      "host": "-",
+      "endpoint": "100.68.38.17, fd7a:115c:a1e0::2701:269f",
+      "status": "verified_active",
+      "evidence": "tailscale status --json"
+    },
+    {
+      "id": "10e75eee346e",
+      "kind": "node",
+      "name": "shannonjlove\u2019s MacBook Air",
+      "host": "-",
+      "endpoint": "100.120.234.104, fd7a:115c:a1e0::b533:ea69",
+      "status": "verified_active",
+      "evidence": "tailscale status --json"
+    },
+    {
+      "id": "43b72f353435",
+      "kind": "subdomain",
+      "name": "sjl-mcp.shannonjlove.cloud",
+      "host": "hostinger",
+      "endpoint": "72.61.74.250:8797",
+      "status": "verified_active",
+      "evidence": "Nginx Proxy Manager proxy id 12",
+      "link": "[sjl-mcp.shannonjlove.cloud](https://sjl-mcp.shannonjlove.cloud)"
+    },
+    {
+      "id": "44f43bb322bb",
+      "kind": "subdomain",
+      "name": "ticktick-mcp.shannonjlove.cloud",
+      "host": "hostinger",
+      "endpoint": "10.89.2.1:8766",
+      "status": "verified_active",
+      "evidence": "Nginx Proxy Manager proxy id 14",
+      "link": "[ticktick-mcp.shannonjlove.cloud](https://ticktick-mcp.shannonjlove.cloud)"
+    },
+    {
+      "id": "f80b86bfeb87",
+      "kind": "subdomain",
+      "name": "webtop.shannonjlove.cloud",
+      "host": "hostinger",
+      "endpoint": "100.67.229.94:3000",
+      "status": "verified_active",
+      "evidence": "Nginx Proxy Manager proxy id 15",
+      "link": "[webtop.shannonjlove.cloud](https://webtop.shannonjlove.cloud)"
+    },
+    {
+      "id": "7557419e7844",
+      "kind": "server",
+      "name": "LoveCloud Hostinger",
+      "endpoint": "100.115.66.75, 72.61.74.250",
+      "status": "verified_active",
+      "evidence": "SSH read-only live inventory"
+    },
+    {
+      "id": "a8f3a3349c79",
+      "kind": "server",
+      "name": "Oracle sOS worker",
+      "endpoint": "100.67.229.94",
+      "status": "verified_active",
+      "evidence": "SSH read-only live inventory"
+    },
+    {
+      "id": "4c4425169107",
+      "kind": "container",
+      "name": "5f3db89c4ec7-infra",
+      "host": "hostinger",
+      "endpoint": "127.0.0.1:5572->5572/tcp, 127.0.0.1:8026->8026/tcp",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "f274996a563a",
+      "kind": "container",
+      "name": "ai-supervisor",
+      "host": "hostinger",
+      "endpoint": "127.0.0.1:8788->8788/tcp",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "a5054bf3f2cf",
+      "kind": "container",
+      "name": "audiobookshelf",
+      "host": "oracle",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "6230e653079a",
+      "kind": "application",
+      "name": "BookStack",
+      "host": "-",
+      "status": "authority_control_plane",
+      "evidence": "workflow page published and API verified 2026-07-18"
+    },
+    {
+      "id": "92782b3cf486",
+      "kind": "container",
+      "name": "bookstack",
+      "host": "hostinger",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "f638fa215cbf",
+      "kind": "container",
+      "name": "bookstack",
+      "host": "oracle",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "3a7cb41921f2",
+      "kind": "container",
+      "name": "bookstack-db",
+      "host": "hostinger",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "72cb844e148c",
+      "kind": "container",
+      "name": "bookstack-db",
+      "host": "oracle",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "e71c9da69c40",
+      "kind": "container",
+      "name": "code-server",
+      "host": "oracle",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "b70a77708ea7",
+      "kind": "application",
+      "name": "Hookmark",
+      "host": "-",
+      "status": "configured_pending",
+      "evidence": "Hookmark pending until registry-backed DOCID exists"
+    },
+    {
+      "id": "8876e98f4320",
+      "kind": "container",
+      "name": "jellyfin",
+      "host": "hostinger",
+      "endpoint": "100.115.66.75:8096->8096/tcp",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "637f3e87a8ad",
+      "kind": "container",
+      "name": "kavita",
+      "host": "oracle",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "282890a9f290",
+      "kind": "container",
+      "name": "mcp-apple-docs",
+      "host": "hostinger",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "22802780b419",
+      "kind": "container",
+      "name": "mcp-ios-sim",
+      "host": "hostinger",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "51efbe4cfb0b",
+      "kind": "container",
+      "name": "mcp-mobile",
+      "host": "hostinger",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "7cd1c757d939",
+      "kind": "container",
+      "name": "memory-agent",
+      "host": "hostinger",
+      "endpoint": "100.115.66.75:8100->8000/tcp",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "682468400861",
+      "kind": "container",
+      "name": "n8n",
+      "host": "hostinger",
+      "endpoint": "127.0.0.1:5678->5678/tcp",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "7658af139abc",
+      "kind": "container",
+      "name": "nginx-proxy-manager",
+      "host": "hostinger",
+      "endpoint": ":80->80/tcp, :443->443/tcp",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "2d3b0bf84cf3",
+      "kind": "container",
+      "name": "ops-agent",
+      "host": "hostinger",
+      "endpoint": "127.0.0.1:8789->8787/tcp",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "b927f00ba7a2",
+      "kind": "application",
+      "name": "Paperless",
+      "host": "-",
+      "status": "authority_control_plane",
+      "evidence": "workflow PDF ingested as document 13 on 2026-07-18"
+    },
+    {
+      "id": "1c9eaf55dd3c",
+      "kind": "container",
+      "name": "paperless",
+      "host": "hostinger",
+      "endpoint": "127.0.0.1:8000->8000/tcp",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "1e53c309bdb0",
+      "kind": "container",
+      "name": "paperless",
+      "host": "oracle",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "b4de41afbe1b",
+      "kind": "container",
+      "name": "paperless-broker",
+      "host": "hostinger",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "3b8f8dcfbdca",
+      "kind": "container",
+      "name": "paperless-broker-1",
+      "host": "hostinger",
+      "status": "legacy_failed",
+      "evidence": "Podman state: exited"
+    },
+    {
+      "id": "df19edda8536",
+      "kind": "container",
+      "name": "paperless-db",
+      "host": "hostinger",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "5d6bde370244",
+      "kind": "container",
+      "name": "paperless-db",
+      "host": "oracle",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "d03c3a2b7cf8",
+      "kind": "container",
+      "name": "paperless-db-1",
+      "host": "hostinger",
+      "status": "legacy_failed",
+      "evidence": "Podman state: exited"
+    },
+    {
+      "id": "6217d9fe1b2b",
+      "kind": "container",
+      "name": "paperless-gotenberg",
+      "host": "hostinger",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "641757e2fb70",
+      "kind": "container",
+      "name": "paperless-redis",
+      "host": "oracle",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "85dc1f9362e1",
+      "kind": "container",
+      "name": "paperless-tika",
+      "host": "hostinger",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "87aecc02b1e0",
+      "kind": "container",
+      "name": "photoprism",
+      "host": "hostinger",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "5ba4ab8894e2",
+      "kind": "container",
+      "name": "portainer",
+      "host": "hostinger",
+      "endpoint": "127.0.0.1:9443->9443/tcp",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "9f73f719a1c7",
+      "kind": "container",
+      "name": "rclone-mcp",
+      "host": "hostinger",
+      "endpoint": "127.0.0.1:5572->5572/tcp, 127.0.0.1:8026->8026/tcp",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "4ae140e788ab",
+      "kind": "container",
+      "name": "rclone-rc",
+      "host": "hostinger",
+      "endpoint": "127.0.0.1:5572->5572/tcp, 127.0.0.1:8026->8026/tcp",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "cfdcacf7eb9d",
+      "kind": "container",
+      "name": "readyspace",
+      "host": "oracle",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "49f2ee6fcec3",
+      "kind": "container",
+      "name": "sjl-file-api",
+      "host": "hostinger",
+      "endpoint": "127.0.0.1:8090->8090/tcp",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "0adc33ed3bcb",
+      "kind": "container",
+      "name": "sjl-mcp",
+      "host": "hostinger",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "2dcc7bf99787",
+      "kind": "container",
+      "name": "sjl-mcp-gateway",
+      "host": "hostinger",
+      "endpoint": ":7300->7300/tcp",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "de5133d80676",
+      "kind": "container",
+      "name": "stash",
+      "host": "hostinger",
+      "endpoint": "100.115.66.75:9999->9999/tcp",
+      "status": "verified_active",
+      "evidence": "Podman state: running"
+    },
+    {
+      "id": "c968743043b1",
+      "kind": "service",
+      "name": "rclone-idrive-e2.service",
+      "host": "hostinger",
+      "status": "verified_active",
+      "evidence": "systemd active=active; sub=running"
+    },
+    {
+      "id": "7d44b07babf4",
+      "kind": "service",
+      "name": "rclone-mcp.service",
+      "host": "hostinger",
+      "status": "verified_active",
+      "evidence": "systemd active=active; sub=running"
+    },
+    {
+      "id": "3f95e80532c7",
+      "kind": "service",
+      "name": "rclone-media.service",
+      "host": "hostinger",
+      "status": "legacy_failed",
+      "evidence": "systemd active=failed; sub=failed"
+    },
+    {
+      "id": "e932ce0a1e78",
+      "kind": "service",
+      "name": "rclone-photos.service",
+      "host": "hostinger",
+      "status": "legacy_failed",
+      "evidence": "systemd active=failed; sub=failed"
+    },
+    {
+      "id": "928b70ccd66d",
+      "kind": "service",
+      "name": "resilio-sync.service",
+      "host": "hostinger",
+      "status": "verified_active",
+      "evidence": "systemd active=active; sub=running"
+    },
+    {
+      "id": "36fd7ea6ac29",
+      "kind": "service",
+      "name": "sjl-worker-canary.service",
+      "host": "oracle",
+      "status": "configured_pending",
+      "evidence": "systemd active=inactive; sub=dead"
+    },
+    {
+      "id": "d6b69503efa3",
+      "kind": "service",
+      "name": "tailscaled.service",
+      "host": "hostinger",
+      "status": "verified_active",
+      "evidence": "systemd active=active; sub=running"
+    },
+    {
+      "id": "42016d7637a9",
+      "kind": "service",
+      "name": "tailscaled.service",
+      "host": "oracle",
+      "status": "verified_active",
+      "evidence": "systemd active=active; sub=running"
+    },
+    {
+      "id": "e28a8bb8a2b2",
+      "kind": "authority",
+      "name": "1Password",
+      "status": "authority_control_plane",
+      "evidence": "v10.1: exclusive secrets authority"
+    },
+    {
+      "id": "55e5c9bd85fa",
+      "kind": "authority",
+      "name": "Hazel",
+      "status": "authority_control_plane",
+      "evidence": "v10.1: sole file-intake authority"
+    },
+    {
+      "id": "ac6e4f616cc0",
+      "kind": "authority",
+      "name": "PostgreSQL registry",
+      "status": "configured_pending",
+      "evidence": "DOCID authority specified; live registry not yet verified"
+    },
+    {
+      "id": "eb467f7de1cb",
+      "kind": "authority",
+      "name": "Private Git",
+      "status": "authority_control_plane",
+      "evidence": "v10.1: executable configuration authority"
+    },
+    {
+      "id": "ca364fdc1403",
+      "kind": "cloud_storage",
+      "name": "1000-nexus-inbox",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "3c7306707032",
+      "kind": "cloud_storage",
+      "name": "2000-nexus-projects",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "8bb06ce84ce4",
+      "kind": "cloud_storage",
+      "name": "3000-nexus-areas",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "e75ef9e0362c",
+      "kind": "cloud_storage",
+      "name": "4000-nexus-resources",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "f0ac9f190e14",
+      "kind": "cloud_storage",
+      "name": "5000-nexus-archives",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "4b1b12eb7620",
+      "kind": "cloud_storage",
+      "name": "nexus-01000-inbox",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "a466206acfd1",
+      "kind": "cloud_storage",
+      "name": "nexus-02000-projects",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "9005a2e505d7",
+      "kind": "cloud_storage",
+      "name": "nexus-03000-areas",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "632b2f238fb2",
+      "kind": "cloud_storage",
+      "name": "nexus-04000-resources",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "401e692cff30",
+      "kind": "cloud_storage",
+      "name": "nexus-05000-archives",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "317b967c1882",
+      "kind": "cloud_storage",
+      "name": "nexus-05000-private",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "8df5f7ac55e6",
+      "kind": "cloud_storage",
+      "name": "nexus-05500-private-media",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 7,
+      "bytes": 368,
+      "contents": "contains objects",
+      "status": "verified_active"
+    },
+    {
+      "id": "b9d460d72b4f",
+      "kind": "cloud_storage",
+      "name": "nexus-1000-inbox",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "c36a1ee54bb0",
+      "kind": "cloud_storage",
+      "name": "nexus-2000-projects",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "d74b6b805f51",
+      "kind": "cloud_storage",
+      "name": "nexus-3000-areas",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "afc799353507",
+      "kind": "cloud_storage",
+      "name": "nexus-4000-resources",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 2,
+      "bytes": 30,
+      "contents": "contains objects",
+      "status": "verified_active"
+    },
+    {
+      "id": "9531a48ffb6c",
+      "kind": "cloud_storage",
+      "name": "nexus-5000-archives",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "017be2447940",
+      "kind": "cloud_storage",
+      "name": "nexus-5000-private",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 2,
+      "bytes": 30,
+      "contents": "contains objects",
+      "status": "verified_active"
+    },
+    {
+      "id": "3bf16706b978",
+      "kind": "cloud_storage",
+      "name": "nexus-archives",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "bc1d7b693c25",
+      "kind": "cloud_storage",
+      "name": "nexus-areas",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "06609f80ee6b",
+      "kind": "cloud_storage",
+      "name": "nexus-audiobooks",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "f3d89fad4173",
+      "kind": "cloud_storage",
+      "name": "nexus-backups",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "4041559f34d3",
+      "kind": "cloud_storage",
+      "name": "nexus-configs",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "f63072832b7a",
+      "kind": "cloud_storage",
+      "name": "nexus-ebooks",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "f0d58ee60207",
+      "kind": "cloud_storage",
+      "name": "nexus-inbox",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "757e121e5753",
+      "kind": "cloud_storage",
+      "name": "nexus-media",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "72cd0e5133bf",
+      "kind": "cloud_storage",
+      "name": "nexus-paperless",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "edbb3fb724cf",
+      "kind": "cloud_storage",
+      "name": "nexus-photos",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "2c92ceddc45f",
+      "kind": "cloud_storage",
+      "name": "nexus-photos-storage",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "b346611019e6",
+      "kind": "cloud_storage",
+      "name": "nexus-projects",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "b604a7849323",
+      "kind": "cloud_storage",
+      "name": "nexus-resources",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "b578d8e6dc98",
+      "kind": "cloud_storage",
+      "name": "nexus-stash",
+      "remote": "idrive-e2",
+      "endpoint": "d8v7.or4.idrivee2-73.com",
+      "objects": 6,
+      "bytes": 398,
+      "contents": "contains objects",
+      "status": "verified_active"
+    },
+    {
+      "id": "22c9f747feb2",
+      "kind": "cloud_storage",
+      "name": "agent-data-e2",
+      "remote": "idrive",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "86f5bdf980ed",
+      "kind": "cloud_storage",
+      "name": "archives-idrive-e2",
+      "remote": "idrive",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 228,
+      "bytes": 2239320748,
+      "contents": "contains objects",
+      "status": "verified_active"
+    },
+    {
+      "id": "aa2112af649e",
+      "kind": "cloud_storage",
+      "name": "areas-idrive-e2",
+      "remote": "idrive",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 3480,
+      "bytes": 73167360247,
+      "contents": "contains objects",
+      "status": "verified_active"
+    },
+    {
+      "id": "36d68bd1e3a4",
+      "kind": "cloud_storage",
+      "name": "assets-e2",
+      "remote": "idrive",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "a598babefff0",
+      "kind": "cloud_storage",
+      "name": "bookstack-data-e2",
+      "remote": "idrive",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "fd055f59b52b",
+      "kind": "cloud_storage",
+      "name": "graphics-media-e2",
+      "remote": "idrive",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "787b03036b44",
+      "kind": "cloud_storage",
+      "name": "inbox-idrive-e2",
+      "remote": "idrive",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "6471b97f1e7e",
+      "kind": "cloud_storage",
+      "name": "n8n-backups-e2",
+      "remote": "idrive",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "164299d2f65e",
+      "kind": "cloud_storage",
+      "name": "paperless-docs-e2",
+      "remote": "idrive",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 10,
+      "bytes": 506891,
+      "contents": "contains objects",
+      "status": "verified_active"
+    },
+    {
+      "id": "40788cfef60f",
+      "kind": "cloud_storage",
+      "name": "private-idrive-e2",
+      "remote": "idrive",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "fb7d36328f4a",
+      "kind": "cloud_storage",
+      "name": "projects-idrive-e2",
+      "remote": "idrive",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 217,
+      "bytes": 14802356105,
+      "contents": "contains objects",
+      "status": "verified_active"
+    },
+    {
+      "id": "db789ac4cbd9",
+      "kind": "cloud_storage",
+      "name": "quarantine-e2",
+      "remote": "idrive",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 1,
+      "bytes": 127,
+      "contents": "contains objects",
+      "status": "verified_active"
+    },
+    {
+      "id": "2626691da0aa",
+      "kind": "cloud_storage",
+      "name": "resources-idrive-e2",
+      "remote": "idrive",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "7273d252f9f9",
+      "kind": "cloud_storage",
+      "name": "shannon-photos-e2",
+      "remote": "idrive",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "fe31431d6ca4",
+      "kind": "cloud_storage",
+      "name": "stacks-backups-e2",
+      "remote": "idrive",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "5c7a1e0eda5b",
+      "kind": "cloud_storage",
+      "name": "video-media-e2",
+      "remote": "idrive",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "22c9f747feb2",
+      "kind": "cloud_storage",
+      "name": "agent-data-e2",
+      "remote": "idrive-primary",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "86f5bdf980ed",
+      "kind": "cloud_storage",
+      "name": "archives-idrive-e2",
+      "remote": "idrive-primary",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 228,
+      "bytes": 2239320748,
+      "contents": "contains objects",
+      "status": "verified_active"
+    },
+    {
+      "id": "aa2112af649e",
+      "kind": "cloud_storage",
+      "name": "areas-idrive-e2",
+      "remote": "idrive-primary",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 3480,
+      "bytes": 73167360247,
+      "contents": "contains objects",
+      "status": "verified_active"
+    },
+    {
+      "id": "36d68bd1e3a4",
+      "kind": "cloud_storage",
+      "name": "assets-e2",
+      "remote": "idrive-primary",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "a598babefff0",
+      "kind": "cloud_storage",
+      "name": "bookstack-data-e2",
+      "remote": "idrive-primary",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "fd055f59b52b",
+      "kind": "cloud_storage",
+      "name": "graphics-media-e2",
+      "remote": "idrive-primary",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "787b03036b44",
+      "kind": "cloud_storage",
+      "name": "inbox-idrive-e2",
+      "remote": "idrive-primary",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "6471b97f1e7e",
+      "kind": "cloud_storage",
+      "name": "n8n-backups-e2",
+      "remote": "idrive-primary",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "164299d2f65e",
+      "kind": "cloud_storage",
+      "name": "paperless-docs-e2",
+      "remote": "idrive-primary",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 10,
+      "bytes": 506891,
+      "contents": "contains objects",
+      "status": "verified_active"
+    },
+    {
+      "id": "40788cfef60f",
+      "kind": "cloud_storage",
+      "name": "private-idrive-e2",
+      "remote": "idrive-primary",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "fb7d36328f4a",
+      "kind": "cloud_storage",
+      "name": "projects-idrive-e2",
+      "remote": "idrive-primary",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 217,
+      "bytes": 14802356105,
+      "contents": "contains objects",
+      "status": "verified_active"
+    },
+    {
+      "id": "db789ac4cbd9",
+      "kind": "cloud_storage",
+      "name": "quarantine-e2",
+      "remote": "idrive-primary",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 1,
+      "bytes": 127,
+      "contents": "contains objects",
+      "status": "verified_active"
+    },
+    {
+      "id": "2626691da0aa",
+      "kind": "cloud_storage",
+      "name": "resources-idrive-e2",
+      "remote": "idrive-primary",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "7273d252f9f9",
+      "kind": "cloud_storage",
+      "name": "shannon-photos-e2",
+      "remote": "idrive-primary",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "fe31431d6ca4",
+      "kind": "cloud_storage",
+      "name": "stacks-backups-e2",
+      "remote": "idrive-primary",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "5c7a1e0eda5b",
+      "kind": "cloud_storage",
+      "name": "video-media-e2",
+      "remote": "idrive-primary",
+      "endpoint": "p3h2.va.idrivee2-48.com",
+      "objects": 0,
+      "bytes": 0,
+      "contents": "empty",
+      "status": "verified_active"
+    },
+    {
+      "id": "d97523265524",
+      "kind": "repository_secret",
+      "name": "Github",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "e3a6460d697f",
+      "kind": "secret_item",
+      "name": "Paperlessemployee",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "8964f5f2485a",
+      "kind": "api_token",
+      "name": "github claude access token Credentials",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "b7bb7c0df169",
+      "kind": "api_token",
+      "name": "Claude Hostinger API Credentials",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "b72ee2ea3c52",
+      "kind": "secret_item",
+      "name": "Hostinger",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "005791a3fdf4",
+      "kind": "secret_item",
+      "name": "iDrive Access Key e2-p3h2.va.idrivee2-48.com-Access-Keys-2",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "a268d023ea82",
+      "kind": "secret_item",
+      "name": "iDrive Access Key e2-p3h2.va.idrivee2-48.com-Access-Keys",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "d2b0167d0502",
+      "kind": "api_token",
+      "name": "Gemini GitHub MCP Personal Access Token",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "e95c2aba2ba9",
+      "kind": "api_token",
+      "name": "GitHub Personal Access Token",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "e95c2aba2ba9",
+      "kind": "api_token",
+      "name": "GitHub Personal Access Token",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "f091f3603a17",
+      "kind": "api_token",
+      "name": "hostinger AI access API Credentials",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "e3f1eb96f056",
+      "kind": "ssh_key",
+      "name": "SSH Key sjlcloudkey.pub",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "6de05f6ec5f8",
+      "kind": "secret_item",
+      "name": "Oracle_SJL Oracle",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "273377b7ddd7",
+      "kind": "secret_item",
+      "name": "RCloneUI",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "da641af16624",
+      "kind": "secret_item",
+      "name": "Idrivee2",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "ba7ce7734fa6",
+      "kind": "secret_item",
+      "name": "Oracle Cloud Infrastructure Instance",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "47a954b4f180",
+      "kind": "ssh_key",
+      "name": "SSH Keys as",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "3d8deccfb3d9",
+      "kind": "api_token",
+      "name": "TailScale Login & token credentials",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "55b1587a0e04",
+      "kind": "ssh_key",
+      "name": "bookstack app key",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "b26ffc78e517",
+      "kind": "secret_item",
+      "name": "Paperless Post",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "57738e17e326",
+      "kind": "secret_item",
+      "name": "SJL S3 idrive E2 All Access 2025",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "4c7115e7bc50",
+      "kind": "secret_item",
+      "name": "n8n",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "b72ee2ea3c52",
+      "kind": "secret_item",
+      "name": "Hostinger",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "a3d5220a0701",
+      "kind": "ssh_key",
+      "name": "claude code tailscale key token Credentials",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "70659563c910",
+      "kind": "api_token",
+      "name": "another tailscale API Credentials",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "4b6ad909c421",
+      "kind": "ssh_key",
+      "name": "tailscale auth key API Credentials",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "c9cbfee3d71f",
+      "kind": "api_token",
+      "name": "Service Account Auth Token: SJL GitHub Actions",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "dbaa453f7ebc",
+      "kind": "ssh_key",
+      "name": "GitHub_2025 SSH Key",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "38f2b219ebbf",
+      "kind": "secret_item",
+      "name": "SJL iDrive S3 Master Access  Key",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "3838e9cb6d95",
+      "kind": "secret_item",
+      "name": "Bookstack",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "989e40a622fa",
+      "kind": "api_token",
+      "name": "Github access token 07252026",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "e0baea92e9e0",
+      "kind": "secret_item",
+      "name": "Telegram HermesLoveCloudBot",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "6e9aff05017f",
+      "kind": "api_token",
+      "name": "BookStack LoveCloud Bootstrap API",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "1a1cf68f9cf5",
+      "kind": "secret_item",
+      "name": "Paperless \u2014ngx",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "720174759aa0",
+      "kind": "secret_item",
+      "name": "IDrive - SJL",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "8d3fab6a55f8",
+      "kind": "secret_item",
+      "name": "Bookstack 7_2025",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "e956e344c5a1",
+      "kind": "api_token",
+      "name": "Bookstack General Access TOKEN for system registry",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "e81da7ab8969",
+      "kind": "api_token",
+      "name": "Paperless ngx API Auth token",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "0e1c7c89b130",
+      "kind": "api_token",
+      "name": "LoveCloud Oracle Access Token -7242026",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "4dbbd749e1b8",
+      "kind": "secret_item",
+      "name": "SJL Idrive Master Access Key",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "eb306b1f4172",
+      "kind": "api_token",
+      "name": "API Credential-Dropbox rclone sjl",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "1b5f3a3ed33b",
+      "kind": "api_token",
+      "name": "Service Account Auth Token: LoveCloud 1password service account for Hermes Agent 07252026",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "e79b30491cf2",
+      "kind": "secret_item",
+      "name": "IdriveE2 11102024 access key",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "67e390ce3250",
+      "kind": "secret_item",
+      "name": "Tailscale",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "67e390ce3250",
+      "kind": "secret_item",
+      "name": "Tailscale",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "67e390ce3250",
+      "kind": "secret_item",
+      "name": "Tailscale",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "af34b6eb139c",
+      "kind": "api_token",
+      "name": "n8n bearer token",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "67e390ce3250",
+      "kind": "secret_item",
+      "name": "Tailscale",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "67e390ce3250",
+      "kind": "secret_item",
+      "name": "Tailscale",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "067841193dd6",
+      "kind": "secret_item",
+      "name": "RClone iDrive",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "72fc788c1d35",
+      "kind": "secret_item",
+      "name": "rClone iDriveE2 access key",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "365958e6bee4",
+      "kind": "secret_item",
+      "name": "rClone iDriveE2 Access Keys",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "be550648eada",
+      "kind": "secret_item",
+      "name": "koofr_shajeMBA",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "c1f623466757",
+      "kind": "repository_secret",
+      "name": "GitHub_2026",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "cf2ddf6686b8",
+      "kind": "secret_item",
+      "name": "koofr_lovecloud_hostinger",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "596a609c7c94",
+      "kind": "secret_item",
+      "name": "koofr_lovecloud_oracle",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "6d928ff0266d",
+      "kind": "secret_item",
+      "name": "Oraclecloud",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "c1f623466757",
+      "kind": "repository_secret",
+      "name": "GitHub_2026",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "1d68acbf2a29",
+      "kind": "repository_secret",
+      "name": "GitHub_lovecloud.sjl",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "8df3146c15ff",
+      "kind": "repository_secret",
+      "name": "GitHub_lovecloudsjl",
+      "status": "authority_control_plane",
+      "authority": "1Password",
+      "secret_value_present": false
+    },
+    {
+      "id": "c0d1da3f94b8",
+      "kind": "repository",
+      "name": "shannonjlove/SJL-SYSTEM-REGISTRY",
+      "status": "configured_pending",
+      "host": "github.com"
+    },
+    {
+      "id": "4d86817e089b",
+      "kind": "repository",
+      "name": "shannonjlove/dashboard-shannonjlove-cloud",
+      "status": "configured_pending",
+      "host": "github.com"
+    },
+    {
+      "id": "ebc4dd9f86eb",
+      "kind": "repository",
+      "name": "shannonjlove/shannonjlove.cloud-dashboard-",
+      "status": "configured_pending",
+      "host": "github.com"
+    },
+    {
+      "id": "748f858ea8d7",
+      "kind": "repository",
+      "name": "shannonjlove/Dashboard-skill-for-LLM",
+      "status": "configured_pending",
+      "host": "github.com"
+    },
+    {
+      "id": "aae1df263253",
+      "kind": "quadlet",
+      "name": "hermes-gateway",
+      "host": "oracle",
+      "coverage": "git_managed",
+      "status": "verified_active"
+    },
+    {
+      "id": "8782fad3f51d",
+      "kind": "quadlet",
+      "name": "lovecloud-local-agents",
+      "host": "oracle",
+      "coverage": "git_managed",
+      "status": "verified_active"
+    },
+    {
+      "id": "19bb075f9ab1",
+      "kind": "quadlet",
+      "name": "registry-db",
+      "host": "oracle",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "162f1992d1ca",
+      "kind": "quadlet",
+      "name": "registry-api",
+      "host": "oracle",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "a510ca14017e",
+      "kind": "quadlet",
+      "name": "photoprism",
+      "host": "oracle",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "853a22127170",
+      "kind": "quadlet",
+      "name": "photoprism-db",
+      "host": "oracle",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "1adfa4376eb1",
+      "kind": "quadlet",
+      "name": "ollama",
+      "host": "oracle",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "895ab7952d5f",
+      "kind": "quadlet",
+      "name": "stash",
+      "host": "oracle",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "7609632dea40",
+      "kind": "quadlet",
+      "name": "webtop",
+      "host": "oracle",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "cf6c80d4cf93",
+      "kind": "quadlet",
+      "name": "torbox-media-center",
+      "host": "oracle",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "2db132d88e8c",
+      "kind": "quadlet",
+      "name": "bookstack",
+      "host": "hostinger",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "d4401269ffcf",
+      "kind": "quadlet",
+      "name": "bookstack-db",
+      "host": "hostinger",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "705df2968c41",
+      "kind": "quadlet",
+      "name": "paperless",
+      "host": "hostinger",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "e88b14405fc8",
+      "kind": "quadlet",
+      "name": "paperless-db",
+      "host": "hostinger",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "8afb13791f92",
+      "kind": "quadlet",
+      "name": "paperless-broker",
+      "host": "hostinger",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "3ffce2da68bb",
+      "kind": "quadlet",
+      "name": "paperless-gotenberg",
+      "host": "hostinger",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "07fe3073bbbd",
+      "kind": "quadlet",
+      "name": "paperless-tika",
+      "host": "hostinger",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "f01e76fd730c",
+      "kind": "quadlet",
+      "name": "nginx-proxy-manager",
+      "host": "hostinger",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "fa8a63f27280",
+      "kind": "quadlet",
+      "name": "photoprism",
+      "host": "hostinger",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "8391995eb376",
+      "kind": "quadlet",
+      "name": "memory-agent",
+      "host": "hostinger",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "0c7c4a9571c0",
+      "kind": "quadlet",
+      "name": "sjl-mcp",
+      "host": "hostinger",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "a7a46ee47275",
+      "kind": "quadlet",
+      "name": "n8n",
+      "host": "hostinger",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "fd42c8152a9f",
+      "kind": "quadlet",
+      "name": "op-connect-api",
+      "host": "hostinger",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "339d950bd6c9",
+      "kind": "quadlet",
+      "name": "op-connect-sync",
+      "host": "hostinger",
+      "coverage": "host_only",
+      "status": "configured_pending"
+    },
+    {
+      "id": "89b5c38c0701",
+      "kind": "filesystem",
+      "name": "koofr_lovecloud_hostinger",
+      "provider": "koofr",
+      "host": "hostinger",
+      "mode": "read_only",
+      "status": "verified_active"
+    },
+    {
+      "id": "0d33caf45458",
+      "kind": "filesystem",
+      "name": "koofr_lovecloud_oracle",
+      "provider": "koofr",
+      "host": "oracle",
+      "mode": "read_only",
+      "status": "verified_active"
+    },
+    {
+      "id": "b27f2cbb2733",
+      "kind": "filesystem",
+      "name": "koofr_shajeMBA",
+      "provider": "koofr",
+      "host": "shajesmba",
+      "mode": "read_only",
+      "status": "verified_active"
+    },
+    {
+      "id": "4b69f7fe94ed",
+      "kind": "filesystem",
+      "name": "/mnt/e2",
+      "provider": "rclone_mount",
+      "host": "oracle",
+      "mode": "documented_exception",
+      "status": "verified_active"
+    },
+    {
+      "id": "3b17e0d1373a",
+      "kind": "filesystem",
+      "name": "/mnt/koofr",
+      "provider": "rclone_mount",
+      "host": "oracle",
+      "mode": "documented_exception",
+      "status": "verified_active"
+    }
+  ]
+}
