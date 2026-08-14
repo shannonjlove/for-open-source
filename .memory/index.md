@@ -1,0 +1,11 @@
+- [[system-registry-reconcile]] — three-env read-only registry reconciliation 2026-08-10
+- [[lovecloud-live-dashboard]] — Scriptable + Lovable Nexus live ops dashboard
+- [[file-naming-tagging-service]] — LoveCloud naming/tagging Quadlet design; BookStack page 53
+- [[chat-archive]] — archived Codex+Claude Code sessions 2026-08-11; ChatGPT pending browser allow
+- [[chatgpt-connectors-write]] — 2026-08-12 enabled all Codex apps/MCP with write auto approval in config.toml
+- [[prompt-router]] — intelligent repo routing MVP from handoff
+- [[local-selfhost-stack]] — Dashy + Uptime Kuma + TablePlus on Mac
+- [[cloudmounter-rclone]] — Koofr in rclone; MediaFire unsupported for mount tools
+- [[jdownloader-setup]] — JD2 install + LoveCloud download landing; cloud mounts blocked
+- [[resilio-hazel-ops]] — Resilio transport + Hazel Mac staging ops pattern
+- [[jellyfin-lovecloud]] — Oracle always-on Jellyfin Quadlet; public jellyfin.shannonjlove.cloud
